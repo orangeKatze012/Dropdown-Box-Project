@@ -46,8 +46,9 @@
                 document.getElementById("price").textContent = "Total Price: $"+formattedPrice
             }
             function warnings(){
-                alert(formattedPrice)
+                alert("Your information has been submitted.")
                 window.location.href = "checkout.html?formattedPrice="+encodeURIComponent(formattedPrice);
+                window.location.href = "checkout.html"
             }
         </script>
     </body>
