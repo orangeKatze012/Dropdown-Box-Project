@@ -6,9 +6,12 @@
     </head>
     <body>
         <h1 style="text-align: center">Welcome to checkout</h1>
-        <p id="text">formattedPrice</p>
+        <p id="total"></p>
         <script>
-            
+            function price(){
+                const params = new URLSearchParams(window.location.search);
+                const total = params.get("formattedprice") ||"UNABLE TO DISPLAY";
+                document.getElementById("total").textContent = total
         </script>
     </body>
 </html>
