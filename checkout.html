@@ -2,16 +2,14 @@
 <html>
     <head>
         <title>Checkout</title>
-        <script src="ordering.js"></script>
     </head>
-    <body onload="price()">
-        <h1 style="text-align: center">Welcome to checkout</h1>
-        <p id="total"></p>
+    <body onload="showName()">    
+        <h3 id="total">Total:</h3>
         <script>
-            function price(){
+            function showName() {
                 const params = new URLSearchParams(window.location.search);
-                const total = params.get("formattedprice") ||"UNABLE TO DISPLAY";
-                document.getElementById("total").textContent = total
+                const name = params.get("formattedPrice") || "UNABLE TO DISPLAY";
+                document.getElementById("total").textContent = "Total: "+formattedPrice;
             }
         </script>
     </body>
