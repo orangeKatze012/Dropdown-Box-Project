@@ -30,7 +30,7 @@
             .body button { color: red; }
         </style>
         <script>
-            let formattedPrice = "0.00";
+            let formattedPrice = "0.00"; // Global variable
             function total() {
                 const dropdown1 = document.querySelector('#snacks');
                 const dropdown2 = document.querySelector('#drinks');
@@ -41,7 +41,7 @@
                 const actualPrice1 = parseFloat(snackPrice);
                 const actualPrice2 = parseFloat(drinkPrice);
                 const preprice = actualPrice1 + actualPrice2;
-                const formattedPrice = preprice.toFixed(2);
+                formattedPrice = preprice.toFixed(2);
                 document.getElementById("price").textContent = "Total Price: $" + formattedPrice;
             }
             function warnings() {
