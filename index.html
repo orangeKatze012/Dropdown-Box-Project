@@ -31,8 +31,8 @@
         </style>
         <script>
             let formattedPrice = "0.00";
-            let selectedOption1 = document.querySelector('#snacks');
-            let selectedOption2 = document.querySelector('#drinks');
+            let selectedOption1 = dropdown1.options[dropdown1.selectedIndex];
+            let selectedOption2 = dropdown2.options[dropdown2.selectedIndex];
             function total() {
                 let dropdown1 = document.querySelector('#snacks');
                 let dropdown2 = document.querySelector('#drinks');
