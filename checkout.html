@@ -6,6 +6,8 @@
     <body onload="dis_total()">    
         <h1 style="text-align: center;">Welcome to checkout</h1>
         <div class="body">
+            <p id="snack">Your snack is NONE</p>
+            <p id="drink">Your drink is NONE</p>
             <p id="total">Your total is $0.00.</p>
             <p id="ticket">Your ticket number is pending.</p>
         </div>
@@ -17,6 +19,10 @@
             function dis_total() {
                 const params = new URLSearchParams(window.location.search);
                 const formattedPrice = params.get("formattedPrice") || "UNABLE TO DISPLAY";
+                const dropdown1 = params.get("dropdown1")
+                const dropdown2 = params.get("dropdown2")
+                document.getElementById("snack").textContent = "Your total is $"+dropdown1+".";
+                document.getElementById("drink").textContent = "Your total is $"+dropdown2+".";
                 document.getElementById("total").textContent = "Your total is $"+formattedPrice+".";
                 let randomNumber = Math.floor((Math.random()*900)+100)
                 document.getElementById("ticket").textContent = "Your ticket number is "+randomNumber+"."
