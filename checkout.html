@@ -3,11 +3,11 @@
     <head>
         <title>Checkout</title>
     </head>
-    <body onload="dis_total()">    
+    <body onload="dis_total()&">    
         <h1 style="text-align: center;">Welcome to checkout</h1>
         <div class="body">
-            <p id="total">Your total is $0.00</p>
-            <p id="ticket"><strong>Your ticket number is pending.</strong></p>
+            <p id="total"><strong>Your total is $0.00</strong></p>
+            <p id="ticket">Your ticket number is pending.</p>
         </div>
         <style>
             .body{text-align: center; width: 300px; background-color: mediumspringgreen; padding: 10px 5px 10px 5px; margin: 0 auto;}
@@ -19,8 +19,9 @@
                 const formattedPrice = params.get("formattedPrice") || "UNABLE TO DISPLAY";
                 document.getElementById("total").textContent = "Your total is $"+formattedPrice;
             }
-            document.getElementById("ticket").textContent = "Your ticket number is "+randomNumber+"."
-            let randomNumber = Math.floor((Math.random()*900)+100)
+            function ticket_num(){}
+                document.getElementById("ticket").textContent = "Your ticket number is "+randomNumber+"."
+                let randomNumber = Math.floor((Math.random()*900)+100)
         </script>
     </body>
 </html>
