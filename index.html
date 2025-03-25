@@ -31,9 +31,11 @@
         </style>
         <script>
             let formattedPrice = "0.00"; // Global variable 
+            let dropdown1 = document.querySelector('#snacks')
+            let dropdown2 = document.querySelector('#drinks')
             function total() {
-                const dropdown1 = document.querySelector('#snacks');
-                const dropdown2 = document.querySelector('#drinks');
+                dropdown1 = document.querySelector('#snacks');
+                dropdown2 = document.querySelector('#drinks');
                 const selectedOption1 = dropdown1.options[dropdown1.selectedIndex];
                 const selectedOption2 = dropdown2.options[dropdown2.selectedIndex];
                 const snackPrice = selectedOption1.getAttribute("data-price");
@@ -46,7 +48,7 @@
             }
             function warnings() {
                 alert("Your information has been submitted.");
-                window.location.href = "checkout.html?formattedPrice=" + encodeURIComponent(formattedPrice);
+                window.location.href = `checkout.html?formattedPrice=${formattedPrice}&dropdown1=${dropdown1}&dropdown2=${dropdown2}`;
             }
         </script>
     </body>
