@@ -9,7 +9,7 @@
             function dis_total() {
                 const params = new URLSearchParams(window.location.search);
                 const formattedPrice = params.get("formattedPrice") || "UNABLE TO DISPLAY";
-                document.getElementById("total").textContent = "Total: "+formattedPrice;
+                document.getElementById("total").textContent = "Total $: "+formattedPrice;
             }
         </script>
     </body>
