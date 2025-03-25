@@ -3,13 +3,13 @@
     <head>
         <title>Checkout</title>
     </head>
-    <body onload="dis_total()">    
+    <body onload="showName()">    
         <h3 id="total">Total:</h3>
         <script>
-            function dis_total() {
+            function showName() {
                 const params = new URLSearchParams(window.location.search);
                 const formattedPrice = params.get("formattedPrice") || "UNABLE TO DISPLAY";
-                document.getElementById("total").textContent = "Total $: "+formattedPrice;
+                document.getElementById("total").textContent = "Total: $" + formattedPrice;
             }
         </script>
     </body>
