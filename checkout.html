@@ -8,7 +8,7 @@
         <script>
             function showName() {
                 const params = new URLSearchParams(window.location.search);
-                const name = params.get("formattedPrice") || "UNABLE TO DISPLAY";
+                const formattedPrice = params.get("formattedPrice") || "UNABLE TO DISPLAY";
                 document.getElementById("total").textContent = "Total: "+formattedPrice;
             }
         </script>
