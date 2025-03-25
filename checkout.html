@@ -18,10 +18,9 @@
                 const params = new URLSearchParams(window.location.search);
                 const formattedPrice = params.get("formattedPrice") || "UNABLE TO DISPLAY";
                 document.getElementById("total").textContent = "Your total is $"+formattedPrice;
-            }
-            function ticket_num(){}
-                document.getElementById("ticket").textContent = "Your ticket number is "+randomNumber+"."
                 let randomNumber = Math.floor((Math.random()*900)+100)
+                document.getElementById("ticket").textContent = "Your ticket number is "+randomNumber+"."
+            }
         </script>
     </body>
 </html>
