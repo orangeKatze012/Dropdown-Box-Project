@@ -4,7 +4,7 @@
         <title>Ordering</title>
     </head>
     <body>
-        <h1 style="text-align:center">Welcome to ordering</h1>
+        <h1 style="text-align:center">Welcome to my webpage</h1>
         <div class="body">
             <h4>Choose a snack:</h4>
             <select id="snacks" onchange="total()">
@@ -30,10 +30,10 @@
             .body button { color: red; }
         </style>
         <script>
-            let formattedPrice = "0.00"; // Global variable
+            let formattedPrice = "0.00"; // Global variable 
             function total() {
-                const dropdown1 = document.querySelector("#snacks");
-                const dropdown2 = document.querySelector("#drinks");
+                const dropdown1 = document.querySelector('#snacks');
+                const dropdown2 = document.querySelector('#drinks');
                 const selectedOption1 = dropdown1.options[dropdown1.selectedIndex];
                 const selectedOption2 = dropdown2.options[dropdown2.selectedIndex];
                 const snackPrice = selectedOption1.getAttribute("data-price");
@@ -41,12 +41,12 @@
                 const actualPrice1 = parseFloat(snackPrice);
                 const actualPrice2 = parseFloat(drinkPrice);
                 const preprice = actualPrice1 + actualPrice2;
-                formattedPrice = preprice.toFixed(2);
+                formattedPrice = preprice.toFixed(2); // Update global variable
                 document.getElementById("price").textContent = "Total Price: $" + formattedPrice;
             }
             function warnings() {
                 alert("Your information has been submitted.");
-                window.location.href = "checkout.html?formattedPrice" + encodeURIComponent(formattedPrice);
+                window.location.href = "checkout.html?formattedPrice=" + encodeURIComponent(formattedPrice);
             }
         </script>
     </body>
