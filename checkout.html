@@ -7,16 +7,17 @@
         <h1>Welcome to checkout</h1>
         <div class="body">
             <p id="total" style="text-align: center;">Total:</p>
-            <style>
-                .body{text-align: center; width: 300px; background-color: mediumspringgreen; padding: 10px 5px 10px 5px; margin: 0 auto;}
-                .body button{color: red;}
-            </style>
-            <script>
-                function dis_total() {
-                    const params = new URLSearchParams(window.location.search);
-                    const formattedPrice = params.get("formattedPrice") || "UNABLE TO DISPLAY";
-                    document.getElementById("total").textContent = "Total: $"+formattedPrice;
-                }
-            </script>
+        </div>
+        <style>
+            .body{text-align: center; width: 300px; background-color: mediumspringgreen; padding: 10px 5px 10px 5px; margin: 0 auto;}
+            .body button{color: red;}
+        </style>
+         <script>
+            function dis_total() {
+                const params = new URLSearchParams(window.location.search);
+                const formattedPrice = params.get("formattedPrice") || "UNABLE TO DISPLAY";
+                document.getElementById("total").textContent = "Total: $"+formattedPrice;
+             }
+        </script>
     </body>
 </html>
