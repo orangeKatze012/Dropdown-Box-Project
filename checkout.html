@@ -3,10 +3,10 @@
     <head>
         <title>Checkout</title>
     </head>
-    <body onload="showName()">    
+    <body onload="(dis_total()">    
         <h3 id="total">Total:</h3>
         <script>
-            function showName() {
+            function dis_total() {
                 const params = new URLSearchParams(window.location.search);
                 const formattedPrice = params.get("formattedPrice") || "UNABLE TO DISPLAY";
                 document.getElementById("total").textContent = "Total: "+formattedPrice;
