@@ -30,7 +30,7 @@
             .body button { color: red; }
         </style>
         <script>
-            let formattedPrice = "0.00"; // Global variable 
+            let formattedPrice = "0.00";
             let dropdown1 = document.querySelector('#snacks')
             let dropdown2 = document.querySelector('#drinks')
             function total() {
@@ -48,7 +48,7 @@
             }
             function warnings() {
                 alert("Your information has been submitted.");
-                window.location.href = `checkout.html?formattedPrice=${formattedPrice}&dropdown1=${dropdown1}&dropdown2=${dropdown2}`;
+                window.location.href = "checkout.html?formattedPrice=${formattedPrice}&dropdown1=${dropdown1}&dropdown2=${dropdown2}";
             }
         </script>
     </body>
