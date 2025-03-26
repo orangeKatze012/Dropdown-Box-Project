@@ -17,7 +17,7 @@
             function dis_total() {
                 const params = new URLSearchParams(window.location.search);
                 const formattedPrice = params.get("formattedPrice") || "UNABLE TO DISPLAY";
-                document.getElementById("total").textContent = "<strong>Your total is $"+formattedPrice+".</strong>";
+                document.getElementById("total").textContent = "Your total is $"+formattedPrice+".";
                 let randomNumber = Math.floor((Math.random()*900)+100);
                 document.getElementById("ticket").textContent = "Your ticket number is "+randomNumber+".";
             }
