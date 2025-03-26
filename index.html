@@ -23,7 +23,7 @@
                 <option value="Lemonade" data-price="2.00">Lemonade ($2.00)</option>
             </select>
             <p id="price">Total Price: $0.00</p>
-            <button onclick="warnings()"><strong>Submit</strong></button>
+            <button onclick="warnings()"><strong>Submit</strong></button
         </div>
         <style>
             .body { text-align: center; width: 300px; background-color: mediumspringgreen; padding: 10px 5px 10px 5px; margin: 0 auto; }
@@ -31,24 +31,22 @@
         </style>
         <script>
             let formattedPrice = "0.00";
-            let selectedOption1 = dropdown1.options[dropdown1.selectedIndex];
-            let selectedOption2 = dropdown2.options[dropdown2.selectedIndex];
             function total() {
-                let dropdown1 = document.querySelector('#snacks');
-                let dropdown2 = document.querySelector('#drinks');
-                selectedOption1 = dropdown1.options[dropdown1.selectedIndex];
-                selectedOption2 = dropdown2.options[dropdown2.selectedIndex];
+                const dropdown1 = document.querySelector('#snacks');
+                const dropdown2 = document.querySelector('#drinks');
+                const selectedOption1 = dropdown1.options[dropdown1.selectedIndex];
+                const selectedOption2 = dropdown2.options[dropdown2.selectedIndex];
                 const snackPrice = selectedOption1.getAttribute("data-price");
                 const drinkPrice = selectedOption2.getAttribute("data-price");
                 const actualPrice1 = parseFloat(snackPrice);
                 const actualPrice2 = parseFloat(drinkPrice);
                 const preprice = actualPrice1 + actualPrice2;
                 formattedPrice = preprice.toFixed(2); // Update global variable
-                document.getElementById("price").textContent = "Total Price: $" + formattedPrice;
+                document.getElementById("price").textContent = "Total Price: $" + formattedPrice
             }
             function warnings() {
                 alert("Your information has been submitted.");
-                window.location.href = `checkout.html?formattedPrice=formattedPrice&selectedOption1=selectedOption1&selectedOption2=selectedOption2`;
+                window.location.href = "checkout.html?formattedPrice=" + encodeURIComponent(formattedPrice);
             }
         </script>
     </body>
